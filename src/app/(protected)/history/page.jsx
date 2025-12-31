@@ -70,8 +70,8 @@ const page = () => {
 
   return (
     <main>
-      <div className="overflow-x-auto max-w-full m-2 p-4">
-        <h1 className="text-3xl font-bold text-center mb-6">السجل</h1>
+      <div className=" container mx-auto md:w-4xl bg-white dark:bg-gray-900 md:rounded-2xl max-w-full p-6 my-2.5 shadow-xl overflow-x-auto">
+        <h1 className=" heading1 my-4">السجل</h1>
         {history.length > 0 && (
           <button
             disabled={clearing}
@@ -88,21 +88,23 @@ const page = () => {
             )}
           </button>
         )}
-        <div className="overflow-x-auto rounded bg-white dark:bg-gray-900 shadow-sm dark:border-gray-600">
-          <table className=" overflow-x-auto min-w-full divide-y divide-gray-500 dark:divide-gray-700">
+        <div className="overflow-x-auto rounded bg-white dark:bg-gray-900 border border-gray-900 dark:border-gray-200 ">
+          <table className=" overflow-x-auto min-w-full divide-y divide-gray-900 dark:divide-gray-200">
             <thead className="ltr:text-left rtl:text-right">
               <tr className="*:font-medium *:text-gray-900 dark:*:text-white">
+                <th className="px-3 py-2 whitespace-nowrap">#</th>
                 <th className="px-3 py-2 whitespace-nowrap">التاريخ</th>
                 <th className="px-3 py-2 whitespace-nowrap">أسم العملة</th>
                 <th className="px-3 py-2 whitespace-nowrap">الرمز</th>
                 <th className="px-3 py-2 whitespace-nowrap">القيمة</th>
                 <th className="px-3 py-2 whitespace-nowrap">نسبة التزوير</th>
+                <th className="px-3 py-2 whitespace-nowrap">التزوير</th>
                 {/* <th className="px-3 py-2 whitespace-nowrap">القيمة</th> */}
                 <th className="px-3 py-2 whitespace-nowrap">التفاصيل</th>
               </tr>
             </thead>
 
-            <tbody className="divide-y divide-gray-500 dark:divide-gray-700">
+            <tbody className="divide-y divide-gray-900 dark:divide-gray-200">
               {history.length === 0 ? (
                 <tr className="*:text-gray-900 *:first:font-medium dark:*:text-white">
                   <td className="px-3 py-2 whitespace-nowrap" rowSpan={5}>
@@ -115,6 +117,7 @@ const page = () => {
                     key={item.id}
                     className="*:text-gray-900 *:first:font-medium dark:*:text-white hover:opacity-75"
                   >
+                    <td className="px-3 py-2 whitespace-nowrap">{item.id}</td>
                     <td className="px-3 py-2 whitespace-nowrap">
                       {new Date(item.timestamp).toLocaleString()}
                     </td>
@@ -129,6 +132,9 @@ const page = () => {
                     </td>
                     <td className="px-3 py-2 whitespace-nowrap">
                       {item.confidence}%
+                    </td>
+                    <td className="px-3 py-2 whitespace-nowrap">
+                      {item.is_counterfeit ? "مزوّرة" : "غير مزوّرة"}
                     </td>
                     <td className="px-3 py-2 whitespace-nowrap">
                       <button

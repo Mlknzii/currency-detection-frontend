@@ -7,6 +7,7 @@ import { IoLogOutOutline } from "react-icons/io5";
 import { IoLogInOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { CiMenuFries } from "react-icons/ci";
+import Image from "next/image";
 
 import ToggleBtn from "./ToggleBtn";
 
@@ -28,7 +29,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-bold tracking-wide text-zinc-900 dark:text-white"
           >
-            Currency<span className="text-indigo-600">App</span>
+            <Image src="/logo.svg" alt="Logo" width={50} height={40} />
           </Link>
 
           {/* Right Section */}

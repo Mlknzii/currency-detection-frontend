@@ -54,7 +54,7 @@ const SinglePredictionPage = () => {
       link.click();
       toast.success("تمت الحفظ بنجاح.");
     } catch (error) {
-      console.error("Error saving screenshot:", error);
+      setError("فشل في الحفظ!");
     }
   };
 
@@ -83,7 +83,7 @@ const SinglePredictionPage = () => {
         toast.error("المشاركة بالصور غير مدعومة في هذا المتصفح.");
       }
     } catch (error) {
-      console.error("Error sharing screenshot:", error);
+      setError("فشل في المشاركة!");
     }
   };
 
@@ -106,11 +106,9 @@ const SinglePredictionPage = () => {
 
   return (
     <main>
-      <div className="container mx-auto p-4 max-w-5xl grid place-items-center">
+      <div className=" container md:w-2xl max-w-full  mx-auto bg-white dark:bg-gray-900 md:rounded-2xl p-6 my-2.5 shadow-xl">
         <div className=" w-full grid place-items-center p-5" ref={detailsRef}>
-          <h1 className="text-4xl md:text-5xl font-bold text-center text-indigo-500">
-            تفاصيل التعرف على العملة
-          </h1>
+          <h1 className=" heading1 my-4">تفاصيل التعرف على العملة</h1>
           {prediction.image_path && (
             <Image
               width={400}
@@ -121,17 +119,17 @@ const SinglePredictionPage = () => {
             />
           )}
 
-          <div className="flex items-center justify-between w-full max-w-md border-b dark:border-gray-600 border-gray-400 pb-4 mb-4">
+          <div className="flex items-center justify-between w-full max-w-md  dark:border-gray-600 border-gray-400 pb-4 mb-4">
             <h2 className=" text-xl font-black text-gray-800 dark:text-gray-200">
               إسم العملة:{" "}
             </h2>
             <p className="text-lg font-semibold text-gray-700 dark:text-gray-400">
-              {prediction.name_ar}
+              {prediction.name_ar} <br />
               <span> {prediction.name_en}</span>
             </p>
           </div>
 
-          <div className="flex items-center justify-between w-full max-w-md border-b dark:border-gray-600 border-gray-400 pb-4 mb-4">
+          <div className="flex items-center justify-between w-full max-w-md  dark:border-gray-600 border-gray-400 pb-4 mb-4">
             <h2 className=" text-xl font-black text-gray-800 dark:text-gray-200">
               القيمة:{" "}
             </h2>
@@ -140,7 +138,7 @@ const SinglePredictionPage = () => {
             </p>
           </div>
 
-          <div className="flex items-center justify-between w-full max-w-md border-b dark:border-gray-600 border-gray-400 pb-4 mb-4">
+          <div className="flex items-center justify-between w-full max-w-md  dark:border-gray-600 border-gray-400 pb-4 mb-4">
             <h2 className=" text-xl font-black text-gray-800 dark:text-gray-200">
               التزوير:{" "}
             </h2>
@@ -149,7 +147,7 @@ const SinglePredictionPage = () => {
             </p>
           </div>
 
-          <div className="flex items-center justify-between w-full max-w-md border-b dark:border-gray-600 border-gray-400 pb-4 mb-4">
+          <div className="flex items-center justify-between w-full max-w-md  dark:border-gray-600 border-gray-400 pb-4 mb-4">
             <h2 className=" text-xl font-black text-gray-800 dark:text-gray-200">
               نسبة التزوير:{" "}
             </h2>
@@ -157,7 +155,7 @@ const SinglePredictionPage = () => {
               {prediction.confidence}%
             </p>
           </div>
-          <div className="flex items-center justify-between w-full max-w-md border-b dark:border-gray-600 border-gray-400 pb-4 mb-4">
+          <div className="flex items-center justify-between w-full max-w-md  dark:border-gray-600 border-gray-400 pb-4 mb-4">
             <h2 className=" text-xl font-black text-gray-800 dark:text-gray-200">
               التاريخ :{" "}
             </h2>

@@ -74,8 +74,8 @@ const profile = () => {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 dark:bg-gray-900 py-10 px-4">
-      <div className="max-w-3xl  mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-10">
+    <main>
+      <div className=" container md:w-2xl max-w-full mx-auto bg-white dark:bg-gray-900 md:rounded-2xl p-6 my-2.5 shadow-xl">
         {/* Avatar */}
         <div className=" flex justify-center">
           <Image
@@ -88,9 +88,7 @@ const profile = () => {
         </div>
 
         {/* Title */}
-        <h1 className="mt-6 text-3xl md:text-4xl font-extrabold text-center text-indigo-500">
-          الملف الشخصي
-        </h1>
+        <h1 className=" heading1 my-4">الملف الشخصي</h1>
 
         {/* Info */}
         <div className="mt-8 space-y-5">
@@ -124,12 +122,9 @@ const profile = () => {
 
         {/* Actions */}
         <div className="mt-8 flex justify-start">
-          <button
-            onClick={() => setIsOpen(true)}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold transition"
-          >
-            <MdDeleteOutline size={20} />
+          <button onClick={() => setIsOpen(true)} className="btn btn-danger">
             حذف حسابي
+            <MdDeleteOutline className=" mr-2 inline-block" size={20} />
           </button>
         </div>
       </div>

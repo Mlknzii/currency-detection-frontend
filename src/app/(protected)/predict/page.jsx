@@ -65,10 +65,8 @@ export default function PredictPage() {
   };
   return (
     <main>
-      <div className=" container mx-auto w-full max-w-md bg-white dark:bg-gray-900 rounded-2xl p-6 my-2.5 shadow-xl space-y-5">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-indigo-500">
-          ابدأ التحقق
-        </h1>
+      <div className=" container mx-auto w-full max-w-md bg-white dark:bg-gray-900 md:rounded-2xl p-6 my-2.5 shadow-xl space-y-5">
+        <h1 className="heading1 my-4">ابدأ التحقق</h1>
 
         {/* ───────── Upload input ───────── */}
         <input

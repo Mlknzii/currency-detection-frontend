@@ -13,7 +13,7 @@ input {
 
 /* Custom Components */
 .btn {
-  @apply rounded-sm px-8 py-3 text-sm font-medium transition hover:scale-110 hover:shadow-xl focus:outline-hidden;
+  @apply cursor-pointer rounded-sm px-8 py-3 text-sm font-medium transition hover:scale-110 hover:shadow-xl focus:outline-hidden;
 }
 .btn-primary {
   @apply bg-indigo-600 text-white;
@@ -32,6 +32,10 @@ input {
 }
 .link {
   @apply text-xl  text-indigo-500 dark:text-indigo-300 hover:underline;
+}
+
+.heading1 {
+  @apply text-3xl md:text-4xl font-bold text-center text-indigo-500;
 }
 
 /* Header and Footer */

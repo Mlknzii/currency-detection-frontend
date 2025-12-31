@@ -19,7 +19,7 @@ const register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirm) {
-      setError("Passwords do not match");
+      setError("كلمتا المرور غير متطابقتان");
       return;
     }
     try {
