@@ -2,8 +2,10 @@
 import axios from "axios";
 import { getToken } from "./auth";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 const apiClient = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: API_URL,
   timeout: 10000,
 });
 
