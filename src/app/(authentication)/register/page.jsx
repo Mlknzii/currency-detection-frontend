@@ -131,7 +131,7 @@ const register = () => {
 
           {/* Link to Register page */}
           <Link href="/login" className=" block link my-2">
-            سجل الدخول
+            لديك حساب؟ تسجيل الدخول
           </Link>
 
           {/* Submit button */}

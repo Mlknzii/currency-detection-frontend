@@ -78,7 +78,7 @@ const login = () => {
           </div>
           {error && <p className="text-red-500 mb-3">{error}</p>}
           <Link href="/register" className=" block link my-2">
-            ليس لديك حساب؟ سجل الآن
+            ليس لديك حساب؟ انشاء حساب
           </Link>
           <button
             disabled={loading}

@@ -33,7 +33,11 @@ export default function RootLayout({ children }) {
           <ThemeProvider attribute="class" enableSystem defaultTheme="system">
             <Header />
             {children}
-            <Toaster position="top-center" reverseOrder={false} />
+            <Toaster
+              duration={5000}
+              position="top-center"
+              reverseOrder={false}
+            />
             <Footer />
           </ThemeProvider>
         </AuthProvider>

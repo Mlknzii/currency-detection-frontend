@@ -157,11 +157,11 @@ const page = () => {
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl w-full max-w-sm p-6 text-center">
             <h2 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-3">
-              تأكيد حذف السجل
+              تأكيد الحذف
             </h2>
 
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              هل أنت متأكد أنك تريد حذف السجل نهائياً؟ لا يمكن التراجع عن هذا
+              هل أنت متأكد أنك تريد اكمال عملية الحذف, لا يمكن التراجع عن هذا
               الإجراء.
             </p>
 
